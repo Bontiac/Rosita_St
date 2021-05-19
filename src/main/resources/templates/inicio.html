@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios</title>
+    <link href="../static/css/bootstrap-grid.min.css" rel="stylesheet" th:href="@{/css/bootstrap.css}">
+
+</head>
+
+<body>
+    <div class="container">
+        <br>
+        <div>
+            <a href="/usuario/api/v1/save/null" class="btn btn-primary">Nuevo</a>
+        </div>
+        <h2 th:if="${list.isEmpty()}">Aún no hay registros</h2>
+        <div th:if="${!list.isEmpty()}">
+            <h2>Usuarios</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Dirección</th>
+                        <th>Teléfono</th>
+                        <th>Eliminar</th>
+                        <th>Editar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="usuario : ${list}">
+                        <td th:text="${usuario.nombre}"></td>
+                        <td th:text="${usuario.apellido}"></td>
+                        <td th:text="${usuario.direccion}"></td>
+                        <td th:text="${usuario.telefono}"></td>
+                        <td>
+                            <a th:href="@{/usuario/api/v1/delete/{id}(id=${usuario.id})}">Eliminar</a>
+                        </td>
+                        <td> <a th:href="@{/usuario/api/v1/save/{id}(id=${usuario.id})}">Editar</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
