@@ -25,7 +25,7 @@
     margin-bottom: 20px;
     font-size: 30px;
   }
-  bgc2, .vLine, .hLine {
+  .bgc2, .vLine, .hLine {
       background-color: rgb(248, 152, 236);
   }
   
