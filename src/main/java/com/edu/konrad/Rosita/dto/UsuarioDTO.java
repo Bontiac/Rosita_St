@@ -6,7 +6,12 @@ public class UsuarioDTO {
     private String nombre;
     private String apellido;
     private String telefono;
-    private String direccion;
+    private String direccion; 
+	private String estado;
+    private String rol; 
+    private String email;
+    private String contraseña;
+
 
     public String getId() {
 		return id;
@@ -46,7 +51,39 @@ public class UsuarioDTO {
 
 	public void setTelefono(String telefono) {
 		this.telefono = telefono;
-	}
+	} 
+	
+	public String getEstado(){
+        return estado;
+    }
+
+    public void setEstado (String estado) {
+        this.estado=estado;
+    }
+
+    public String getRol(){
+        return rol;
+    }
+
+    public void setRol (String rol) {
+        this.rol=rol;
+    }
+
+    public String getEmail(){
+        return email;
+    }
+
+    public void setEmail (String email) {
+        this.email=email;
+    }
+
+    public String getContraseña(){
+        return contraseña;
+    }
+
+    public void setContraseña (String contraseña) {
+        this.contraseña=contraseña;
+    }
 
 
 }

@@ -1,4 +1,3 @@
-<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
 
 firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
@@ -9,14 +8,13 @@ firebase.auth().onAuthStateChanged(function (user) {
 });
 
 function login() {
-
     var userEmail = document.getElementById('email_field').value;
     var userPass = document.getElementById('password_field').value;
     const auth = firebase.auth();
     auth.signInWithEmailAndPassword(email, password)
         .then((userCredetential)=>{
             var user=userCredetential.user;
-            
+
         }).catch((error) => {
             var errorCode = error.code;
             var errorMessage = error.message;

@@ -46,6 +46,12 @@ public class UsuarioRestController {
 		return "log_in";
 	}
 
+	@RequestMapping(value = "/todo")
+	public String list(Model model) throws Exception {
+		model.addAttribute("list", usuarioServiceAPI.getAll());
+		return "list_page";
+	}
+
 	/*@GetMapping(value = "/find/{id}")
 	public UsuarioDTO find(@PathVariable String id) throws Exception {
 		return usuarioServiceAPI.get(id);
@@ -69,7 +75,9 @@ public class UsuarioRestController {
 
 	@PostMapping("/save")
     public String save(Usuario usuario) throws Exception{
-	usuarioServiceAPI.save(usuario);
+		usuario.setRol("cliente");
+		usuario.setEstado("activo");
+		usuarioServiceAPI.save(usuario);
 		
         return "redirect:/all";
     }

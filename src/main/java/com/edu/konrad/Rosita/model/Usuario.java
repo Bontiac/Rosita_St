@@ -6,6 +6,10 @@ public class Usuario {
     private String apellido;
     private String telefono;
     private String direccion;
+    private String estado;
+    private String rol; 
+    private String email;
+    private String contraseña;
 
     public String getNombre(){
         return nombre;
@@ -37,6 +41,38 @@ public class Usuario {
 
     public void setDireccion (String direccion) {
         this.direccion=direccion;
+    }
+
+    public String getEstado(){
+        return estado;
+    }
+
+    public void setEstado (String estado) {
+        this.estado=estado;
+    }
+
+    public String getRol(){
+        return rol;
+    }
+
+    public void setRol (String rol) {
+        this.rol=rol;
+    }
+
+    public String getEmail(){
+        return email;
+    }
+
+    public void setEmail (String email) {
+        this.email=email;
+    }
+
+    public String getContraseña(){
+        return contraseña;
+    }
+
+    public void setContraseña (String contraseña) {
+        this.contraseña=contraseña;
     }
 
 }

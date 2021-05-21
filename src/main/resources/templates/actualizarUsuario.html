@@ -11,8 +11,10 @@
 <body>
     <div class="container">
         <form action="#" th:action="@{/update}" th:object="${usuario}" method="POST">
-            <input type="hidden" id="id" th:field="*{id}" />           
-            <div class="row">
+            <input type="hidden" id="id" th:field="*{id}" />
+            <input type="hidden" id="estado" th:field="*{estado}" />
+            <input type="hidden" id="rol" th:field="*{rol}" />           
+            <div class="col-md-12">
                 <div class="col-md-4">
                     <label for="nombre">Nombre</label>
                     <input type="text" class="form-control" id="nombre" th:field="*{nombre}" name="nombre">
@@ -21,16 +23,26 @@
                     <label for="apellido">Apellido</label>
                     <input type="text" class="form-control" id="apellido" th:field="*{apellido}" name="apellido">
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <label for="direccion">Dirección</label>
                     <input type="text" class="form-control" id="direccion" th:field="*{direccion}" name="direccion">
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <label for="telefono">Teléfono</label>
                     <input type="text" class="form-control" id="telefono" th:field="*{telefono}" name="telefono">
                 </div>
+                <div class="col-md-4">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" th:field="*{email}" name="email">
+                </div>
+                <div class="col-md-4">
+                    <label for="contraseña">Contraseña</label>
+                    <input type="text" class="form-control" id="contraseña" th:field="*{contraseña}"
+                        name="contraseña">
+                </div>
+                <button type="submit" class="btn btn-primary">Guardar</button>
             </div>
-            <button type="submit" class="btn btn-primary">Guardar</button>
+            
         </form>
     </div>
 </body>
