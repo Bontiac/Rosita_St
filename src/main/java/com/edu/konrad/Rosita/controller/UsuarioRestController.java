@@ -80,4 +80,5 @@ public class UsuarioRestController {
 		usuarioServiceAPI.delete(id);
 		return "redirect:/usuario/api/v1/all";
 	}
+
 }
