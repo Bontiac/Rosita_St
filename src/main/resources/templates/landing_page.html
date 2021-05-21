@@ -1,0 +1,236 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<link rel="stylesheet" href="../static/css/landing_page.css">
+<!doctype html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Menu</title>
+  </head>
+  <body>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark  navbar-custom fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Tienda de Rosita - Menu</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/login">Iniciar sesion
+                <span class="sr-only">(current)</span>
+              </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Sobre Nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Rosita</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contactanos!</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <!-- Slide One - Set the background image for this slide in the line below -->
+      <div class="carousel-item active" style="background-image: url('https://images.pexels.com/photos/6535368/pexels-photo-6535368.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');height: 300px;">
+        <div class="carousel-caption d-none d-md-block">
+          <h2 class="display-4">En la Vanguardia de la Moda</h2>
+          <p class="lead">Trayendo las trendas mas populares a precios razonables.</p>
+        </div>
+      </div>
+      <!-- Slide Two - Set the background image for this slide in the line below -->
+      <div class="carousel-item" style="background-image: url('https://images.pexels.com/photos/5647631/pexels-photo-5647631.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'); height: 300px;">
+        <div class="carousel-caption d-none d-md-block">
+          <h2 class="display-4">Comodidad y Seguridad</h2>
+          <p class="lead">Acompanandote en las etapas mas complejas de tu vida.</p>
+        </div>
+      </div>
+      <!-- Slide Three - Set the background image for this slide in the line below -->
+      <div class="carousel-item" style="background-image: url('https://images.pexels.com/photos/5901631/pexels-photo-5901631.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');  height: 300px;">
+        <div class="carousel-caption d-none d-md-block">
+          <h2 class="display-4">Pensando en nuestros Clientes</h2>
+          <p class="lead">Porque la calidad, es nuestra prioridad.</p>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Anterior</span>
+        </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Siguiente</span>
+        </a>
+  </div>
+</header>
+
+<!-- Page Content -->
+<section class="py-5 text-center">
+      <div class="container"> 
+        <h2 class="text-center">Nuestros Servicios</h2>
+        <p class="text-muted mb-5 text-center">Ropa de disenador hecha a tus gustos, para todas las edades, para hombres y mujeres, y a precios razonables.</p>
+        <div class="row">
+          <div class="col-sm-6 col-lg-4 mb-3">
+            <svg class="lnr text-primary services-icon" style="border: black;">
+              <use xlink:href="#lnr-leaf"class="icon"></use>
+            </svg>
+            <h6>Comunicacion persona a Persona</h6>
+            <p class="text-muted">Habla directamente con nuestros empleados sobre los productos ofrecidos, servicio 24/7 para tu comodidad.</p>
+          </div>
+          <div class="col-sm-6 col-lg-4 mb-3">
+            <svg class="lnr text-primary services-icon">
+              <use xlink:href="#lnr-heart"class="icon"></use>
+            </svg>
+            <h6>Amor por nuestro trabajo</h6>
+            <p class="text-muted">Cada uno de los colaboradores de la tienda de rosita se compromete en poner toda la atencion a esa compra tan especial.</p>
+          </div>
+          <div class="col-sm-6 col-lg-4 mb-3">
+            <svg class="lnr text-primary services-icon">
+              <use xlink:href="#lnr-rocket" class="icon"></use>
+            </svg>
+            <h6>Innovamos la Industria</h6>
+            <p class="text-muted">Voluptate ex irure ipsum ipsum ullamco ipsum reprehenderit non ut mollit commodo.</p>
+          </div>
+          <div class="col-sm-6 col-lg-4 mb-3">
+            <svg class="lnr text-primary services-icon">
+              <use xlink:href="#lnr-paperclip"class="icon"></use>
+            </svg>
+            <h6>Recordamos tus recomendaciones</h6>
+            <p class="text-muted">Tempor commodo nostrud ex Lorem occaecat duis occaecat minim.</p>
+          </div>
+          <div class="col-sm-6 col-lg-4 mb-3">
+            <svg class="lnr text-primary services-icon">
+              <use xlink:href="#lnr-screen"class="icon"></use>
+            </svg>
+            <h6>Pide desde tu Hogar</h6>
+            <p class="text-muted">Et fugiat sint occaecat voluptate incididunt anim nostrud ea cillum cillum consequat.</p>
+          </div>
+          <div class="col-sm-6 col-lg-4 mb-3">
+            <svg class="lnr text-primary services-icon">
+              <use xlink:href="#lnr-inbox"class="icon"></use>
+            </svg>
+            <h6>Mira nuestro catalogo en tiempo real</h6>
+            <p class="text-muted">Et labore tempor et adipisicing dolor.</p>
+          </div>
+        </div>
+      </div>
+</section>
+<section class="main">
+<div class="container mt-4">
+    <h1 class="text-center mb-4 p-4 ">Nuestros Ultimos Productos</h1>
+      <div class="row">
+
+   <div class="card-columns">
+
+  <div class="card shadow border-0">
+    <img class="card-img-top" src="https://4.bp.blogspot.com/-InDD3Hm_bhU/XB4_TK3TT7I/AAAAAAAAAJ4/r5tUeCOqq1MTchFh7D7pWdf582A4qYIIwCEwYBhgL/s1600/Businesswoman-working-at-a-computer-1280x720.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card shadow border-0">
+    <img class="card-img-top" src="https://4.bp.blogspot.com/-InDD3Hm_bhU/XB4_TK3TT7I/AAAAAAAAAJ4/r5tUeCOqq1MTchFh7D7pWdf582A4qYIIwCEwYBhgL/s1600/Businesswoman-working-at-a-computer-1280x720.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card shadow border-0">
+    <img class="card-img-top" src="https://4.bp.blogspot.com/-InDD3Hm_bhU/XB4_TK3TT7I/AAAAAAAAAJ4/r5tUeCOqq1MTchFh7D7pWdf582A4qYIIwCEwYBhgL/s1600/Businesswoman-working-at-a-computer-1280x720.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+
+</div>
+</div>
+   </div>
+   </section>
+   
+   <!-- Header -->
+<header class=" text-center py-5 mb-4" style="background-color:black;">
+  <div class="container">
+    <h1 class="font-weight-light text-white">Conoce el Equipo!</h1>
+  </div>
+</header>
+
+<!-- Page Content -->
+<div class="container">
+  <div class="row">
+    <!-- Team Member 1 -->
+    <div class="col-xl-3 col-md-6 mb-4">
+      <div class="card border-0 shadow">
+        <img src="https://source.unsplash.com/TMgQMXoglsM/500x350" class="card-img-top" alt="...">
+        <div class="card-body text-center">
+          <h5 class="card-title mb-0">Rosita</h5>
+          <div class="card-text text-black-50">Duena</div>
+        </div>
+      </div>
+    </div>
+    <!-- Team Member 2 -->
+    <div class="col-xl-3 col-md-6 mb-4">
+      <div class="card border-0 shadow">
+        <img src="https://source.unsplash.com/9UVmlIb0wJU/500x350" class="card-img-top" alt="...">
+        <div class="card-body text-center">
+          <h5 class="card-title mb-0">Grupo de Trabajo X</h5>
+          <div class="card-text text-black-50">Desarrolladores Web</div>
+        </div>
+      </div>
+    </div>
+
+  <!-- /.row -->
+
+</div>
+
+<div class="container">
+    <div class="row">
+         <div class="col-md-12">
+        <blockquote class="blockquote text-center mb-0">
+            <br>
+          <svg class="lnr text-muted quote-icon pull-left">
+            <use xlink:href="#lnr-heart">                                       
+          </use></svg>
+
+  <br>
+        </blockquote>
+        </div>
+
+        </div>
+        
+      </div>
+<!-- /.container -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+      <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
+
+  </body>
+</html>

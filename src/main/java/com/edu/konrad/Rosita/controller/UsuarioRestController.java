@@ -37,9 +37,13 @@ public class UsuarioRestController {
 	}
 
 	@RequestMapping(value = "/")
-	public String index(Model model) throws Exception {
-		model.addAttribute("list", usuarioServiceAPI.getAll());
-		return "inicio";
+	public String index() throws Exception {
+		return "landing_page";
+	}
+
+	@RequestMapping(value = "/login")
+	public String login() throws Exception {
+		return "log_in";
 	}
 
 	/*@GetMapping(value = "/find/{id}")
