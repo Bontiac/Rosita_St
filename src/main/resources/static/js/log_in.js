@@ -1,4 +1,3 @@
-
 firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
         window.alert('user logged in')
@@ -7,21 +6,27 @@ firebase.auth().onAuthStateChanged(function (user) {
     }
 });
 
-function login() {
-    var userEmail = document.getElementById('email_field').value;
-    var userPass = document.getElementById('password_field').value;
-    const auth = firebase.auth();
-    auth.signInWithEmailAndPassword(email, password)
-        .then((userCredetential)=>{
-            var user=userCredetential.user;
+function login(){
 
-        }).catch((error) => {
-            var errorCode = error.code;
-            var errorMessage = error.message;
-        });
-
-
-}
+    var userEmail = document.getElementById("email_field").value;
+    var userPass = document.getElementById("password_field").value;
+  
+    firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function(error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+  
+      window.alert("Error : " + errorMessage);
+  
+      // ...
+    });
+  
+  }
+  
+  function logout(){
+    firebase.auth().signOut();
+  }
+  
 function register() {
 
     var userEmail = document.getElementById('email_field').value;
