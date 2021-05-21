@@ -6,7 +6,7 @@ h2 {
 	font-size: 26px;
 	font-weight: 300;
 	text-align: center;
-	text-transform: uppercase;
+
 	position: relative;
 	margin: 30px 0 80px;
 }
@@ -143,3 +143,19 @@ h2::after {
 	font-size: 14px;
 	color: #828eb5;
 }
+.navbar-custom {
+    background-color: #000000;
+}
+.lnr {
+    display: inline-block;
+    fill: currentColor;
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.05em;
+    stroke-width: 1;
+  }
+  
+  .services-icon {
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
