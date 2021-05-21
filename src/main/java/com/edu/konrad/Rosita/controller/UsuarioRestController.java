@@ -23,7 +23,7 @@ import com.edu.konrad.Rosita.model.Usuario;
 import com.edu.konrad.Rosita.service.API.UsuarioServiceAPI;
 
 @Controller
-@RequestMapping(value = "/usuario/api/v1/")
+@RequestMapping(value = "/")
 @CrossOrigin("*")
 public class UsuarioRestController {
 
@@ -32,6 +32,12 @@ public class UsuarioRestController {
 
     @RequestMapping(value = "/all")
 	public String getAll(Model model) throws Exception {
+		model.addAttribute("list", usuarioServiceAPI.getAll());
+		return "inicio";
+	}
+
+	@RequestMapping(value = "/")
+	public String index(Model model) throws Exception {
 		model.addAttribute("list", usuarioServiceAPI.getAll());
 		return "inicio";
 	}
@@ -53,16 +59,22 @@ public class UsuarioRestController {
 
 	@GetMapping("/save/{id}")
     public String viewSave(@PathVariable("id") String id, Model model) throws Exception {
-
 			model.addAttribute("usuario", new Usuario());
 			return "crearUsuario";   
     }
 
 	@PostMapping("/save")
     public String save(Usuario usuario) throws Exception{
-        usuarioServiceAPI.save(usuario);
-        return "redirect:/usuario/api/v1/all";
+	usuarioServiceAPI.save(usuario);
+		
+        return "redirect:/all";
     }
+
+	@PostMapping("/update")
+	public String update(Usuario usuario, String id) throws Exception{
+		usuarioServiceAPI.save(usuario, id);
+		return "redirect:/all";
+	}
 
 	@GetMapping("/update/{id}")
 	public String viewUpdate(@PathVariable("id") String id, Model model) throws Exception {
@@ -85,6 +97,6 @@ public class UsuarioRestController {
 	@GetMapping("/delete/{id}")
     public String delete(@PathVariable("id") String id) throws Exception{
         usuarioServiceAPI.delete(id);
-        return "redirect:/usuario/api/v1/all";
+        return "redirect:/all";
     }
 }
