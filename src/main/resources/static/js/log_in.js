@@ -42,3 +42,7 @@ function register() {
            var errorMessage = error.message;
         });
 }
+function logout(){
+    firebase.auth().signOut();
+  }
+  
