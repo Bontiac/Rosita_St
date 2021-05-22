@@ -1,7 +1,6 @@
 firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
         window.alert('user logged in')
-        location.href="/all";
     } else {
         // No user is signed in.
     }
@@ -21,7 +20,7 @@ function login(){
   
       // ...
     });
-  
+    location.href="/all";
   }
 
   
@@ -42,6 +41,6 @@ function register() {
 }
 function logout(){
     firebase.auth().signOut();
-    window.alert('user deslogued')
+    window.alert('user logout')
   }
   
