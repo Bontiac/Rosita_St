@@ -1,8 +1,11 @@
 package com.edu.konrad.Rosita.model;
 
 public class Producto {
+    private String imagen;
     private String nombre;
-    private int valor;
+    private double precio;
+    private double stock;
+    private boolean disponibilidad;
 
     public String getNombre() {
         return nombre;
@@ -12,12 +15,16 @@ public class Producto {
         this.nombre = nombre;
     }
 
-    public int getAValor() {
-        return valor;
+    public double getAPrecio() {
+        return precio;
     }
 
-    public void setApellido(int valor) {
-        this.valor = valor;
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+
+    public boolean getDisponivilidad() {
+        return disponibilidad;
     }
 
 }
