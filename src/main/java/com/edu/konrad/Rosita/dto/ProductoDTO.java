@@ -6,7 +6,7 @@ public class ProductoDTO {
     private String nombre;
     private double precio;
     private double stock;
-    private boolean estado;
+    private String estado;
 
     public String getId() {
 
@@ -56,11 +56,11 @@ public class ProductoDTO {
         this.stock = stock;
     }
 
-    public boolean getEstado(){
+    public String getEstado(){
         return estado;
     }
 
-    public void setEstado(boolean estado){
+    public void setEstado(String estado){
         this.estado=estado;
     }
 

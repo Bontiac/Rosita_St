@@ -40,4 +40,29 @@ public class ProductoRestController {
         return "listarProductos";
     }
 
+    @PostMapping("/producto")
+	public String save(Producto producto) throws Exception {
+		producto.setEstado("activo");
+		productoServiceAPI.save(producto);
+		return "redirect:/productos";
+	}
+
+    @PostMapping("/actProd")
+	public String update(Producto producto, String id) throws Exception {
+		productoServiceAPI.save(producto, id);
+		return "redirect:/productos";
+	}
+
+	@GetMapping("/actProd/{id}")
+	public String viewUpdate(@PathVariable("id") String id, Model model) throws Exception {
+		model.addAttribute("producto", productoServiceAPI.get(id));
+		return "actualizarProducto";
+	}
+
+    @GetMapping("/deleteProd/{id}")
+	public String delete(@PathVariable("id") String id) throws Exception {
+		productoServiceAPI.delete(id);
+		return "redirect:/productos";
+	}
+
 }

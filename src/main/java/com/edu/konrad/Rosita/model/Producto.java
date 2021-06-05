@@ -5,7 +5,7 @@ public class Producto {
     private String nombre;
     private double precio;
     private double stock;
-    private boolean disponibilidad;
+    private String estado;
 
     public String getNombre() {
         return nombre;
@@ -15,16 +15,12 @@ public class Producto {
         this.nombre = nombre;
     }
 
-    public double getAPrecio() {
+    public double getPrecio() {
         return precio;
     }
 
     public void setPrecio(double precio) {
         this.precio = precio;
-    }
-
-    public boolean getDisponivilidad() {
-        return disponibilidad;
     }
 
     public void setStock(double stock){
@@ -41,6 +37,14 @@ public class Producto {
 
     public String getImagen(){
         return imagen;
+    }
+
+    public void setEstado(String estado){
+        this.estado=estado;
+    }
+
+    public String getEstado(){
+        return estado;
     }
 
 }

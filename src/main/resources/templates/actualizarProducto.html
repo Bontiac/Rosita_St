@@ -4,13 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crear producto</title>
+    <title>Crear usuario</title>
     <link href="../static/css/bootstrap-grid.min.css" rel="stylesheet" th:href="@{/css/bootstrap.css}">
 </head>
 
 <body>
     <div class="container">
-        <form action="#" th:action="@{/producto}" th:object="${producto}" method="POST">
+        <form action="#" th:action="@{/actProd}" th:object="${producto}" method="POST">
+            <input type="hidden" id="id" th:field="*{id}" />
+            <input type="hidden" id="estado" th:field="*{estado}" />
             <div class="col-md-12">
                 <div class="col-md-4">
                     <label for="nombre">Nombre</label>
@@ -25,12 +27,12 @@
                     <input type="number" class="form-control" id="stock" th:field="*{stock}" name="stock" required>
                 </div>
                 <div class="col-md-4">
-                    <label for="imagen">imagen</label>
+                    <label for="imagen">Imagen</label>
                     <input type="text" class="form-control" id="imagen" th:field="*{imagen}" name="imagen" required>
                 </div>
                 <button type="submit" class="btn btn-primary">Guardar</button>
             </div>
-
+            
         </form>
     </div>
 </body>
