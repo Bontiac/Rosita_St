@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear producto</title>
+    <link href="../static/css/bootstrap-grid.min.css" rel="stylesheet" th:href="@{/css/bootstrap.css}">
+</head>
+
+<body>
+    <div class="container">
+        <form action="#" th:action="@{/producto}" th:object="${producto}" method="POST">
+            <div class="col-md-12">
+                <div class="col-md-4">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" th:field="*{nombre}" name="nombre" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="precio">Precio</label>
+                    <input type="text" class="form-control" id="precio" th:field="*{precio}" name="precio" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="stock">Stock</label>
+                    <input type="text" class="form-control" id="stock" th:field="*{stock}" name="stock" required>
+                </div>
+                <div class="col-md-4">
+                    <select name="select">
+                        <option value="true">Disponible</option>
+                        <option value="false" selected>No dsiponible</option>
+                      </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Guardar</button>
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>
