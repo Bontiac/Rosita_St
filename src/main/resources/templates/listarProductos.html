@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios</title>
+    <link href="../static/css/bootstrap-grid.min.css" rel="stylesheet" th:href="@{/css/bootstrap.css}">
+
+</head>
+
+<body>
+    <div class="container">
+        <br>
+        <div>
+
+            <a href="/producto/null" class="btn btn-primary">Nuevo</a>
+
+        </div>
+
+        <h2 th:if="${list.isEmpty()}">Aún no hay registros</h2>
+        <div th:if="${!list.isEmpty()}">
+            <h2>Productos</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Stock</th>
+                        <th>Imagen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="producto : ${list}">
+                        <td th:text="${producto.nombre}"></td>
+                        <td th:text="${producto.precio}"></td>
+                        <td th:text="${producto.stock}"></td>
+                        <td th:text="${producto.imagen}"></td>
+                        <td>
+                            <a th:href="@{/delete/{id}(id=${producto.id})}">Eliminar</a>
+                        </td>
+                        <td> <a th:href="@{/update/{id}(id=${producto.id})}">Editar</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div style="display: inline; ">
+
+                <a href="/" class="btn btn-primary" style="margin-right:85%;">Volver</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

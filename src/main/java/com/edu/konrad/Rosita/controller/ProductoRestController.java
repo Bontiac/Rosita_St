@@ -28,10 +28,16 @@ public class ProductoRestController {
     @Autowired
     private ProductoServiceAPI productoServiceAPI;
 
-    @RequestMapping(value = "/producto")
-    public String list(Model model) throws Exception {
-        model.addAttribute("list", productoServiceAPI.getAll());
+    @GetMapping("/producto/{id}")
+    public String viewSave(@PathVariable("id") String id, Model model) throws Exception {
+        model.addAttribute("producto", new Producto());
         return "crearProducto";
+    }
+
+    @RequestMapping(value = "/lista")
+    public String getAll(Model model) throws Exception {
+        model.addAttribute("list", productoServiceAPI.getAll());
+        return "redirect:listarProductos";
     }
 
 }
