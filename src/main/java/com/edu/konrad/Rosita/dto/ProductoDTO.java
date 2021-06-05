@@ -56,4 +56,12 @@ public class ProductoDTO {
         this.stock = stock;
     }
 
+    public boolean getEstado(){
+        return estado;
+    }
+
+    public void setEstado(boolean estado){
+        this.estado=estado;
+    }
+
 }

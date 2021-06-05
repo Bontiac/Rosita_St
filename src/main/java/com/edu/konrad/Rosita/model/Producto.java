@@ -27,4 +27,20 @@ public class Producto {
         return disponibilidad;
     }
 
+    public void setStock(double stock){
+        this.stock=stock;
+    }
+
+    public double getStock(){
+        return stock;
+    }
+
+    public void setImagen(String imagen){
+        this.imagen=imagen;
+    }
+
+    public String getImagen(){
+        return imagen;
+    }
+
 }

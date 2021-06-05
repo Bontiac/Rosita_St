@@ -22,7 +22,7 @@ import com.edu.konrad.Rosita.model.Producto;
 import com.edu.konrad.Rosita.service.API.ProductoServiceAPI;
 
 @Controller
-@RequestMapping(value = "/")
+//@RequestMapping(value = "/")
 @CrossOrigin("*")
 public class ProductoRestController {
     @Autowired
@@ -34,10 +34,10 @@ public class ProductoRestController {
         return "crearProducto";
     }
 
-    @RequestMapping(value = "/lista")
+    @RequestMapping(value = "/productos")
     public String getAll(Model model) throws Exception {
         model.addAttribute("list", productoServiceAPI.getAll());
-        return "redirect:listarProductos";
+        return "listarProductos";
     }
 
 }
