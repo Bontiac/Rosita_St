@@ -14,13 +14,13 @@
         <br>
         <div>
 
-            <a href="/producto/null" class="btn btn-primary">Nuevo</a>
+  
 
         </div>
 
         <h2 th:if="${list.isEmpty()}">Aún no hay registros</h2>
         <div th:if="${!list.isEmpty()}">
-            <h2>Productos</h2>
+            <h2>Catalogo</h2>
             <table class="table">
                 <thead>
                     <tr>
@@ -28,9 +28,6 @@
                         <th>Precio</th>
                         <th>Stock</th>
                         <th>Imagen</th>
-                        <th>Estado</th>
-                        <th>Cambiar estado</th>
-                        <th>Editar</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -39,17 +36,7 @@
                         <td th:text="${producto.precio}"></td>
                         <td th:text="${producto.stock}"></td>
                         <td><img th:src="${producto.imagen}" style="width: 50px; height: 50px;"></td>
-<<<<<<< HEAD
-                        <td th:text="${producto.estado}"></td>
-                        <td>
-                            <a th:href="@{/deleteProd/{id}(id=${producto.id})}">Cambiar</a>
-=======
-                        <td id="admin_view">
-                            <a id="admin_view" th:href="@{/deleteProd/{id}(id=${producto.id})}">Eliminar</a>
->>>>>>> cf2297a02f2cfea37aa2b19dc7f0bc5e7f327a0a
-                        </td>
-                        <td id="admin_view"> <a id="admin_view" th:href="@{/actProd/{id}(id=${producto.id})}">Editar</a>
-                        </td>
+
                     </tr>
                 </tbody>
             </table>
