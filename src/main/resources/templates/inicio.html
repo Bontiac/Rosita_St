@@ -31,7 +31,7 @@
                         <th>E-mail</th>
                         <th>Estado</th>
                         <th>Rol</th>
-                        <th>Eliminar</th>
+                        <th>Cambiar Estado</th>
                         <th>Editar</th>
                     </tr>
                 </thead>
@@ -45,7 +45,7 @@
                         <td th:text="${usuario.estado}"></td>
                         <td th:text="${usuario.rol}"></td>
                         <td>
-                            <a th:href="@{/delete/{id}(id=${usuario.id})}">Eliminar</a>
+                            <a th:href="@{/delete/{id}(id=${usuario.id})}">Cambiar</a>
                         </td>
                         <td> <a th:href="@{/update/{id}(id=${usuario.id})}">Editar</a>
                         </td>

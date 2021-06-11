@@ -61,7 +61,19 @@ public class ProductoRestController {
 
     @GetMapping("/deleteProd/{id}")
 	public String delete(@PathVariable("id") String id) throws Exception {
-		productoServiceAPI.delete(id);
+		ProductoDTO producto=productoServiceAPI.get(id);
+		Producto product=new Producto();
+		product.setNombre(producto.getNombre());
+		product.setImagen(producto.getImagen());
+		product.setPrecio(producto.getPrecio());
+		product.setStock(producto.getStock());
+		if(producto.getEstado().equalsIgnoreCase("activo")){
+			producto.setEstado("inactivo");
+		}else{
+			producto.setEstado("activo");
+		}
+		product.setEstado(producto.getEstado());
+		update(product, id);
 		return "redirect:/productos";
 	}
 

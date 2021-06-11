@@ -101,7 +101,21 @@ public class UsuarioRestController {
 
 	@GetMapping("/delete/{id}")
 	public String delete(@PathVariable("id") String id) throws Exception {
-		usuarioServiceAPI.delete(id);
+		UsuarioDTO usuario=usuarioServiceAPI.get(id);
+		Usuario user= new Usuario();
+		user.setNombre(usuario.getNombre());
+		user.setApellido(usuario.getApellido());
+		user.setDireccion(usuario.getDireccion());
+		user.setTelefono(usuario.getTelefono());
+		user.setEmail(usuario.getEmail());
+		user.setRol(usuario.getRol());
+		if(usuario.getEstado().equalsIgnoreCase("activo")){
+			usuario.setEstado("inactivo");
+		}else{
+			usuario.setEstado("activo");
+		}
+		user.setEstado(usuario.getEstado());
+		update(user, id);
 		return "redirect:/all";
 	}
 }

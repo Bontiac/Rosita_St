@@ -28,6 +28,9 @@
                         <th>Precio</th>
                         <th>Stock</th>
                         <th>Imagen</th>
+                        <th>Estado</th>
+                        <th>Cambiar estado</th>
+                        <th>Editar</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -36,8 +39,9 @@
                         <td th:text="${producto.precio}"></td>
                         <td th:text="${producto.stock}"></td>
                         <td><img th:src="${producto.imagen}" style="width: 50px; height: 50px;"></td>
+                        <td th:text="${producto.estado}"></td>
                         <td>
-                            <a th:href="@{/deleteProd/{id}(id=${producto.id})}">Eliminar</a>
+                            <a th:href="@{/deleteProd/{id}(id=${producto.id})}">Cambiar</a>
                         </td>
                         <td> <a th:href="@{/actProd/{id}(id=${producto.id})}">Editar</a>
                         </td>
