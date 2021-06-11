@@ -40,6 +40,12 @@ public class ProductoRestController {
         return "listarProductos";
     }
 
+	@RequestMapping(value = "/catalogo")
+    public String getAllC(Model model) throws Exception {
+        model.addAttribute("list", productoServiceAPI.getAll());
+        return "listarProductosCliente";
+    }
+
     @PostMapping("/producto")
 	public String save(Producto producto) throws Exception {
 		producto.setEstado("activo");
