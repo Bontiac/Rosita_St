@@ -38,12 +38,10 @@ public class ProductoDTO {
     }
 
     public double getPrecio() {
-
         return precio;
     }
 
-    public void setDouble(double precio) {
-
+    public void setPrecio(double precio) {
         this.precio = precio;
     }
 

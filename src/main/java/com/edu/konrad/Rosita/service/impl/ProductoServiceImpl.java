@@ -17,7 +17,6 @@ public class ProductoServiceImpl extends GenericServiceImpl<Producto, ProductoDT
 
     @Override
     public CollectionReference getCollection() {
-        // TODO Auto-generated method stub
         return firestore.collection("productos");
     }
 
